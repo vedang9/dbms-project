@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'signin_style.css') }}">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div>
+        <h1 style="text-align:center; color:#EA2027; font-size:40px">Sign In</h1>
+
+        <form method="POST" action=''>
+            <label for="uname" style="font-size:20px; font-family:Helvetica">Username</label><br>
+            <input type="text" id="uname" name="username" placeholder="Username"><br>
+            <label for="password" style="font-size:20px; font-family:Helvetica">Password</label><br>
+            <input type="password" id="password" name="password" placeholder="Password"> 
+            <a href="#"><p style="font-size:20px; text-align:right; color:black; font-family:Helvetica"><b><i>Forgot Password?</i></b></p></a>  
+            <input type="submit" value="Sign In" style="font-size:20px; font-family:Helvetica"> 
+             
+        </form>
+    </div>
+</body>

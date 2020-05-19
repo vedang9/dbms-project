@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'home_page_style.css') }}">
+    </head>
+    
+    <body>
+        <ul>
+            <li class="trans"><a href="#" class="active"><i class="fa fa-fw fa-home"></i> Home</a></li>
+            <li class="trans"><a href="#">Hotel</a></li>
+            <li class="trans"><a href="#"><i class="fa fa-plane" style="font-size:21px; margin-right:20px;"></i>Flight</a></li>
+            <li class="trans"><a href="#">Holidays</a></li>
+            <li class="trans"><a href="#">Help</a></li>
+            <li class="search">
+                <form>
+                <input type="search" name="search" id="ser" placeholder="Search....">
+            </form>
+        </li>
+        </ul>
+        <br>
+
+        {% with messages=get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category,message in messages %}
+                    <div class='alert alert-{{ category }}'>
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        
+        <div class="gallery" id="image1">
+            <a href="#">
+            <div class="overlay">
+            <div class="desc">Add description of image</div>
+            </div>
+            <div class="adventure">
+                <h1>Adventure</h1>
+            </div>
+        </a>
+        </div>
+        
+
+        
+        
+        <div class="gallery" id="image2">
+            <a href="#">
+            <div class="overlay">
+                <div class="desc">Add description of image</div>
+            </div>
+            <div class="adventure">
+                <h1>Religious</h1>
+            </div>   
+            </a>     
+        </div>
+
+
+
+        <div class="gallery" id="image3">
+            <a href="#">
+            <div class="overlay">
+                <div class="desc">Add description of image</div>
+            </div>   
+            <div class="adventure">
+                <h1>Historical</h1>
+            </div>  
+            </a>   
+        </div>
+
+
+        <div class="gallery" id=image4>
+            <a href="#">
+            <div class="overlay">
+                <div class="desc">Add description of image</div>
+            </div>  
+            <div class="adventure">
+                <h1>Environmental</h1>
+            </div> 
+            </a>  
+        </div>   
+        
+        <div class="sbutton">
+        <button type="submit"><i class="fa fa-search"></i></button>
+        </div>
+
+        <div class="review">
+            <div class="review1">
+                <h1 style="text-align:center;">Review 1</h1>
+            </div>
+
+            <div class="review2">
+                <h1 style="text-align:center;">Review 2</h1>
+            </div>
+
+            <div class="review3">
+                <h1 style="text-align:center;">Review 3 </h1>
+            </div>
+        </div>
+
+
+      
+    </body>
+</html>
