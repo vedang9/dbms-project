@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+
+            body{
+                background-image:url("img 6.jpg");
+                background-repeat:none;
+                background-attachment:fixed;
+                background-size:cover;
+            }
+            input[type="text"]{
+                width:500px;
+                padding:15px 20px;
+                margin: 8px 0 50px;
+                display:inline-block;
+                border:none;
+                border-radius:4px;
+                box-sizing:border-box;
+                transition:0.3s ;
+                outline:none;
+                font-size:18px;
+            }
+
+            input[type=text]:focus{
+            border:3px solid black;
+        }
+
+            
+
+
+            input[type="date"]{
+                padding:11px 20px;
+                font-size:19px;
+                margin: 8px 0;
+                transition:0.5s;
+                outline:none;
+                border:none;
+                border-radius:5px;
+                width:460px;
+                margin-bottom:50px;
+
+            }
+
+            input[type="date"]:focus{
+                border:3px solid black;
+            }
+
+
+            .travellers{
+                padding:11px 20px;
+                font-size:19px;
+                margin: 8px 0;
+                transition:0.5s;
+                outline:none;
+                border:none;
+                border-radius:5px;
+                width:460px;
+                margin-bottom:50px;
+
+            }
+
+            .travellers:focus{
+                border:3px solid black;
+            }
+            
+
+           
+           .email{
+                margin-top:5px;
+            }
+
+            .number{
+                margin-top:5px;
+            }
+
+            input[type="submit"]{
+            width:200px;
+            background-color:#0984e3;
+            padding:14px 20px;
+            color:white;
+            border:none;
+            margin: 20px 30%;
+            cursor:pointer;
+            border-radius: 50px;
+        }
+        
+        .submit{
+            position:absolute;
+            top:1070px;
+            left:130px;
+        }
+
+        input[type="submit"]:hover{
+            background-color:#54a0ff;
+        }
+
+        .outer{
+                border-radius: 50px;
+                background: rgba(255, 255, 255, 0.5);
+                padding: 40px ;
+                transform:scale(1);
+                width:500px;
+                height:1100px;
+                position:absolute;
+                top:50%;
+                left:50%;   
+                transform:translate(-50%,-50%);
+                top:650px;
+                margin-bottom:60px;
+                box-shadow:5px 5px 20px 10px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="outer">
+            <form>
+                
+                <h1 style="text-align:center; color:#EA2027; font-size:40px; margin-top:10px; margin-bottom:60px ">Traveller Details</h1>
+                <label for="t1" style="font-size:20px; font-family:Helvetica"><b>Traveller Name</b></label><br>
+                <input type="text" id="t1" name="traveller1" placeholder="Full Name"><br>
+                
+                
+                <label for="DOT" style="font-size:20px; font-family:Helvetica"><b>Date of Travel</b></label><br>
+                <input type="date" id="DOT" name="DOT"><br>
+
+
+                <label for="totravellers" style="font-size:20px; font-family:Helvetica"><b>Total Travellers<small>(including kids and senior citizens)</small></b></label><br>
+                <input list="totravellers" class="travellers" name="totravellers" placeholder="Total Travellers" style="font-size:20px; font-family:Helvetica"><br>
+                <datalist id="totravellers">
+                <option value="0"></option>
+                <option value="1">
+                <option value="2">
+                <option value="3">
+                <option value="4">
+                <option value="5">
+                </datalist>
+                
+                
+                
+                
+                <label for="kids" style="font-size:20px; font-family:Helvetica"><b>Total Kids</b></label><br>
+                <input list="kids" class="travellers" name="kids" placeholder="Total Kids" style="font-size:20px; font-family:Helvetica"><br>
+                <datalist id="kids">
+                <option value="0"></option>
+                <option value="1">
+                <option value="2">
+                <option value="3">
+                <option value="4">
+                <option value="5">
+                </datalist>
+
+
+                <label for="scitizens" style="font-size:20px; font-family:Helvetica"><b>Total Sinior Citizens</b></label><br>
+                <input list="scitizens" class="travellers" name="scitizens" placeholder="Total Senior Citizens" style="font-size:20px; font-family:Helvetica"><br>
+                <datalist id="scitizens">
+                <option value="0"></option>
+                <option value="1">
+                <option value="2">
+                <option value="3">
+                <option value="4">
+                <option value="5">
+                </datalist>
+
+              
+
+                
+                <div class="email">
+                    <label for="email" style="font-size:20px; font-family:Helvetica"><b>Email</b></label><br>
+                    <input type="text" id="email" name="emailid" placeholder="email">
+                </div>
+
+                <div class="number">
+                    <label for="num" style="font-size:20px; font-family:Helvetica"><b>Phone Number</b></label><br>
+                    <input type="text" id="num" name="number" placeholder="Phone Number">
+                </div>
+
+                <div class="submit">
+                    <input type="submit" value="Travel..." style="font-size:20px; font-family:Helvetica"> 
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

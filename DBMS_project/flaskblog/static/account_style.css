@@ -1,0 +1,63 @@
+input[type="submit"]{
+    width:200px;
+    background-color:#0984e3;
+    padding:14px 20px;
+    color:white;
+    border:none;
+    margin: 20px 30%;
+    cursor:pointer;
+    border-radius: 50px;
+       
+}
+input[type="submit"]:hover{
+    background-color:#54a0ff;
+}
+
+
+.box {
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 40px ;
+    transform:scale(1);
+    width:600px;
+    height:750px;
+    position:absolute;
+    top:50%;
+    left:50%;   
+    transform:translate(-50%,-50%);
+    box-shadow:5px 5px 20px 10px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+
+}
+
+body{
+    background-image:url("img 6.jpg");
+    background-repeat:none;
+    background-attachment:fixed;
+    background-size:cover;
+}
+
+.text{
+    font-size:20px;
+    font-family:Helvetica;
+}
+
+img{
+    width:160px;
+}
+
+.name-email{
+    transform:translate(200px,-90px);
+    margin-bottom: -85px;
+}
+
+.content-section{
+    margin-top: 50px;;
+}
+
+p{
+    color:red;
+    font-size: 20px;
+}
+

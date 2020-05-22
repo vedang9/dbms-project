@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'account_style.css') }}">
+        <title>{{title}}</title>
+    </head>
+
+    <body>
+         <!--<h1>{{ current_user.firstname  }}</h1> -->
+          
+            <div class="box">
+                <h1 style="text-align:center; color:#EA2027; font-size:40px">Update Account</h1>
+                <div class="content-section">
+                    <div class="media'">
+                        <img class="rounded-circle account-img" src="{{ image_file }} ">
+                        <div class="media-body">
+                            <div class="name-email">
+                            <h2 class="account-heading "> {{ current_user.firstname + "  " + current_user.lastname }}</h2>
+                            <p>{{ current_user.email }}</p>
+                            </div>
+                        </div>
+                    </div>
+        {% with messages=get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category,message in messages %}
+                    <div class='alert alert-{{ category }}'>
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+                <form method="POST" action="" enctype="multipart/form-data">
+                    {{ form.hidden_tag() }}                 
+                      <div class="form-group">
+                        {{ form.phone_number.label(class="form-control-label text") }}
+                        
+                        {% if form.phone_number.errors %}
+                            {{ form.phone_number(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.phone_number.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.phone_number(class="form-control form-control-lg") }}
+                        {% endif %}
+                   </div>
+                    
+                    
+    
+                    <div class="form-group">
+                        {{ form.email.label(class="form-control-label text") }}
+                        
+                        {% if form.email.errors %}
+                            {{ form.email(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.email.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.email(class="form-control form-control-lg") }}
+                        {% endif %}
+                   </div>
+    
+                   <div class="form-group">
+                    {{ form.picture.label() }}
+                    {{ form.picture(class="form-control-file") }}
+                    {% if form.picture.errors %}
+                        {% for error in form.picture.errors %}
+                            <span class="text-danger">{{ error }}</span><br>
+                        {% endfor %}
+                    {% endif %}
+                   </div>
+
+                    <div class="form-group">
+                        {{ form.submit(class="btn") }} 
+                    </div>
+                    
+                    
+                    </form>
+                
+                    
+    
+            </div>
+            
+        </div>
+
+        <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>
